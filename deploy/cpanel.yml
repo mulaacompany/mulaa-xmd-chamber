@@ -1,0 +1,64 @@
+# MULAA XMD BOT - CPanel Deployment Chronicles
+# Creator: Amantle Mpaekae (Mulax Prime)
+# Deployment Sigil: [MULAA_XMD_DEPLOY]
+---
+deployment:
+  tasks:
+    # Establish deployment path for MULAA chronicles
+    - export DEPLOY_SANCTUM=/home/mulaaxmd/public_html/
+    
+    # Chronicle the initiation of deployment
+    - echo "[MULAA_DEPLOY] 🌀 Initiating chronicle deployment to CPanel..."
+    - echo "[MULAA_DEPLOY] 📜 Creator: Amantle Mpaekae (Mulax Prime)"
+    - echo "[MULAA_DEPLOY] 🏢 Project: MULAA XMD BOT v1.0"
+    - echo "[MULAA_DEPLOY] 🌌 Path: $DEPLOY_SANCTUM"
+    - echo "[MULAA_DEPLOY] 📅 Timestamp: $(date '+%Y-%m-%d %H:%M:%S')"
+    
+    # Transfer the sacred core chronicles
+    - /bin/cp -R index.js $DEPLOY_SANCTUM
+    - echo "[MULAA_DEPLOY] ✅ Heartstone transferred"
+    
+    - /bin/cp -R routes $DEPLOY_SANCTUM
+    - echo "[MULAA_DEPLOY] ✅ Sacred pathways transferred"
+    
+    - /bin/cp -R gift $DEPLOY_SANCTUM
+    - echo "[MULAA_DEPLOY] ✅ Runic forge transferred"
+    
+    - /bin/cp -R public $DEPLOY_SANCTUM
+    - echo "[MULAA_DEPLOY] ✅ Communion gateway transferred"
+    
+    - /bin/cp -R package.json $DEPLOY_SANCTUM
+    - echo "[MULAA_DEPLOY] ✅ Project chronicle transferred"
+    
+    - /bin/cp -R package-lock.json $DEPLOY_SANCTUM
+    - echo "[MULAA_DEPLOY] ✅ Dependencies lock transferred"
+    
+    - /bin/cp -R node_modules $DEPLOY_SANCTUM
+    - echo "[MULAA_DEPLOY] ✅ External essences transferred"
+    
+    # Establish the chronicle sanctum
+    - mkdir -p $DEPLOY_SANCTUM/chronicles
+    - echo "[MULAA_DEPLOY] ✅ Chronicle sanctum established"
+    
+    # Forge the deployment sigil
+    - echo "MULAA_XMD_BOT_DEPLOYED" > $DEPLOY_SANCTUM/.mulaa_sigil
+    - echo "Creator: Amantle Mpaekae (Mulax Prime)" >> $DEPLOY_SANCTUM/.mulaa_sigil
+    - echo "Project: MULAA XMD BOT v1.0" >> $DEPLOY_SANCTUM/.mulaa_sigil
+    - echo "Deployment: $(date '+%Y-%m-%d %H:%M:%S')" >> $DEPLOY_SANCTUM/.mulaa_sigil
+    - echo "Sigil: #6A11CB" >> $DEPLOY_SANCTUM/.mulaa_sigil
+    
+    # Commence the awakening ritual
+    - echo "[MULAA_DEPLOY] ⚡ Awakening the Heartstone..."
+    - cd $DEPLOY_SANCTUM && npm start &
+    
+    # Chronicle the completion
+    - echo "[MULAA_DEPLOY] ✨ Deployment complete!"
+    - echo "[MULAA_DEPLOY] 🌐 Communion Gateway: https://your-domain.com"
+    - echo "[MULAA_DEPLOY] 🛡️ Bonding Chamber: https://your-domain.com/pair"
+    - echo "[MULAA_DEPLOY] 🔮 Sigil Forge: https://your-domain.com/qr"
+    - echo "[MULAA_DEPLOY] 📚 Chronicle: https://your-domain.com/chronicle"
+    - echo ""
+    - echo "[MULAA_DEPLOY] 🔒 Deployment Sigil:"
+    - cat $DEPLOY_SANCTUM/.mulaa_sigil
+    - echo ""
+    - echo "For Legacy. For the Code. For MULAA."
