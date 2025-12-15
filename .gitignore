@@ -1,0 +1,111 @@
+# MULAA XMD BOT - Chronicle Protection
+# Creator: Amantle Mpaekae (Mulax Prime)
+# Sigil: [MULAA_XMD_IGNORE]
+
+# ⚡ SACRED ESSENCES (Never commit these)
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+*.env
+
+# 📜 SESSION CHRONICLES (Private communion records)
+session/
+sessions/
+chronicles/
+mulaa_communions/
+creds.json
+mulaa_chronicle.json
+*.session
+*.session.*
+*.creds
+*.auth
+*.state
+
+# 🔐 SECRET KEYS & TOKENS
+*.key
+*.pem
+*.cert
+*.crt
+secret*
+private*
+config.json
+secrets/
+keys/
+
+# 🧠 NODE ESSENCES (Regenerated during communion)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 🌌 RUNTIME CHRONICLES
+logs/
+*.log
+*.pid
+.DS_Store
+*.pid
+*.seed
+*.pid.lock
+
+# 🏗️ BUILD ARTIFACTS
+dist/
+build/
+.out/
+.next/
+.nuxt/
+.cache/
+.coverage/
+.nyc_output/
+
+# 🧪 TEST CHRONICLES
+coverage/
+.nyc_output/
+*.lcov
+.coveralls.yml
+
+# 🔮 EDITOR CHRONICLES
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# 🌊 DEPLOYMENT CHRONICLES
+.cpanel.yml
+.railway/
+.vercel/
+.netlify/
+.heroku/
+
+# 📦 COMPRESSED CHRONICLES
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# 🎨 MULAA-SPECIFIC
+.mulaa_sigil
+.mulaa_*
+chronicle.log
+heartstone.log
+sigil_forge.log
+
+# 🚨 EMERGENCY - TEMPORARY CHRONICLES
+tmp/
+temp/
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# ⚠️ WARNING: The following are sacred and must not be shared
+# They contain the essence of MULAA COMPANY
