@@ -1,0 +1,109 @@
+# MULAA XMD BOT - Heroku Communion Ritual
+# Creator: Amantle Mpaekae (Mulax Prime)
+# Sigil: [MULAA_XMD_HEROKU]
+
+build:
+  docker:
+    web: Dockerfile  # Optional: For containerized deployment
+  
+  buildpacks:
+    - heroku/nodejs
+    # - heroku/python (if future Python integration needed)
+  
+  config:
+    NPM_CONFIG_PRODUCTION: "false"
+    NODE_ENV: "production"
+    MULAA_ENVIRONMENT: "heroku"
+    MULAA_SIGNATURE: "#6A11CB"
+  
+  # MULAA Build Commands
+  pre_build:
+    - echo "[MULAA_HEROKU] 🌀 Initiating Heroku communion ritual..."
+    - echo "[MULAA_HEROKU] 📜 Creator: Amantle Mpaekae (Mulax Prime)"
+    - echo "[MULAA_HEROKU] 🏢 Project: MULAA XMD BOT v1.0"
+    - echo "[MULAA_HEROKU] ⚡ Environment: $NODE_ENV"
+    - echo "[MULAA_HEROKU] 🎨 Signature: $MULAA_SIGNATURE"
+  
+  post_build:
+    - echo "[MULAA_HEROKU] ✅ Build complete"
+    - echo "[MULAA_HEROKU] 📦 Dependencies: $(npm list --depth=0 | wc -l) packages"
+    - echo "[MULAA_HEROKU] 🔧 Node version: $(node -v)"
+    - echo "[MULAA_HEROKU] 🧬 NPM version: $(npm -v)"
+
+run:
+  web: 
+    command: npm start
+    # PM2 for production (if using pm2 in package.json scripts)
+    # command: npm run start:prod
+  
+  # Worker dyno for background tasks (optional)
+  # worker:
+  #   command: node worker.js
+  #   size: eco
+  
+  # Cron/scheduler dyno (optional)
+  # scheduler:
+  #   command: node scheduler.js
+  
+  # Redis/background processing (optional)
+  # redis:
+  #   command: redis-server
+  #   size: eco
+
+release:
+  # Pre-release checks and migrations
+  command:
+    - echo "[MULAA_HEROKU] 🚀 Preparing release..."
+    - echo "[MULAA_HEROKU] ⏰ Release timestamp: $(date '+%Y-%m-%d %H:%M:%S')"
+    - echo "[MULAA_HEROKU] 🔍 Health check preparation"
+    # Add any database migrations or setup scripts here
+    # - npm run migrate
+    # - npm run seed
+  
+  image: web
+
+# Heroku addons configuration (uncomment and configure as needed)
+# addons:
+#   - plan: heroku-postgresql
+#     as: DATABASE
+#   - plan: heroku-redis
+#     as: REDIS
+#   - plan: papertrail
+#   - plan: sendgrid
+
+# Environment variables (set these in Heroku dashboard)
+# env:
+#   MULAA_SIGNATURE: "#6A11CB"
+#   PORT: "50900"
+#   NODE_ENV: "production"
+#   LOG_LEVEL: "info"
+#   ENABLE_LOGGING: "true"
+
+# Formation configuration (dyno types and scaling)
+# formation:
+#   web:
+#     quantity: 1
+#     size: eco  # or hobby, standard-1x, etc.
+#   worker:
+#     quantity: 0  # Set to 1 if using worker dyno
+#     size: eco
+
+# Health checks
+# checks:
+#   web:
+#     path: /health
+#     initial_delay: 10
+#     period: 30
+#     timeout: 5
+#     success_threshold: 2
+#     failure_threshold: 3
+
+# MULAA deployment completion ritual
+post_deploy:
+  - echo "[MULAA_HEROKU] ✨ Deployment complete!"
+  - echo "[MULAA_HEROKU] 🌐 Communion Gateway: https://$(heroku domains | grep -o 'herokuapp.com' | head -1)"
+  - echo "[MULAA_HEROKU] 🛡️ Bonding Chamber: /pair"
+  - echo "[MULAA_HEROKU] 🔮 Sigil Forge: /qr"
+  - echo "[MULAA_HEROKU] 📚 Chronicle: /chronicle"
+  - echo ""
+  - echo "For Legacy. For the Code. For MULAA."
